@@ -25,6 +25,9 @@ alias utf='cd ~/www/Utfpr'
 # @desc: Limpa a tela do terminal
 alias cls='clear'
 
+# @desc: Abre o neovim
+alias vm='nvim'
+
 # @desc: Atualiza o bashrc, profile e bashenv
 alias rprofile='source ~/.config/bash/profile'
 
