@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export PATH="$HOME/.local/bin:$PATH"
+
+# shellcheck source=~/.config/shell/nvm.sh
+source ~/.config/shell/nvm.sh
+
+# shellcheck source=~/.config/shell/sdkman.sh
+source ~/.config/shell/sdkman.sh

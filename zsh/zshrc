@@ -1,0 +1,36 @@
+# =============================
+# ZSH CORE CONFIG
+# =============================
+
+# ---------- Performance ----------
+autoload -Uz compinit
+ZSH_CACHE_DIR="$HOME/.cache/zsh"
+mkdir -p "$ZSH_CACHE_DIR"
+compinit -d "$ZSH_CACHE_DIR/zcompdump"
+
+# ---------- History ----------
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+setopt sharehistory
+setopt histignorealldups
+setopt histreduceblanks
+
+# ---------- Safety / Bash compatibility ----------
+setopt NO_NOMATCH        # evita erro com globs vazios (rm *.txt)
+setopt NO_BEEP
+
+# ---------- Editor ----------
+export EDITOR=nvim
+export VISUAL=nvim
+
+# ---------- Modular loading ----------
+source ~/.config/zsh/env.zsh
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/keybinds.zsh
+source ~/.config/zsh/plugins.zsh
+source ~/.config/zsh/functions/utils.zsh
+
+
+eval "$(starship init zsh)"

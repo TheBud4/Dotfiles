@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Se não for um shell interativo,não faça nada (Sempre deixar antes de qualquer comando)
+[[ $- != *i* ]] && return
+
+# Torna o globbing (uso de *, ?) insensível a maiúsculas/minúsculas
+if [ -n "${BASH_VERSION-}" ]; then
+    shopt -s nocaseglob
+fi
+
+# Shared shell config
+# shellcheck source=/dev/null
+source ~/.config/shell/shared.sh
+
+# Aliases compartilhados
+# shellcheck source=/dev/null
+for f in "${XDG_CONFIG_HOME:-$HOME/.config}"/shell/aliases/*.sh; do
+    [ -r "$f" ] && source "$f"
+done
+
+# Funções compartilhadas
+# shellcheck source=/dev/null
+for f in "${XDG_CONFIG_HOME:-$HOME/.config}"/shell/functions/*.sh; do
+    [ -r "$f" ] && source "$f"
+done

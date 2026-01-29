@@ -1,0 +1,13 @@
+#! /bin/bash
+
+# Carrega variáveis de ambiente
+if [ -f ~/.config/bash/bashenv ]; then
+    # shellcheck source=/home/thebud4/.config/bash/bashenv
+    source ~/.config/bash/bashenv
+fi
+
+# Carrega configurações do shell interativo se existirem
+if [ -f ~/.config/bash/bashrc ]; then
+    # shellcheck source=/home/thebud4/.config/bash/bashrc
+    source ~/.config/bash/bashrc
+fi

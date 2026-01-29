@@ -1,0 +1,56 @@
+# --- Pastas de Estado e Cache (Ignorar sempre) ---
+Code/
+'Docker Desktop'/
+mozilla/
+pulse/
+abrt/
+configstore/
+dconf/
+evolution/
+goa-1.0/
+gnome-boxes/
+libvirt/
+enchant/
+ibus/
+
+# --- Arquivos de Sistema e Hardware ---
+monitors.xml
+monitors.xml~
+user-dirs.dirs
+user-dirs.locale
+.gsd-keyboard.settings-ported
+gnome-initial-setup-done
+gnome-xdg-terminals.list
+xdg-terminals.list
+mimeapps.list
+
+# --- Seguranca e Credenciais (CRITICO) ---
+# Nunca suba tokens ou chaves privadas
+**/hosts.yml
+**/*.key
+**/*.pem
+**/*.env
+**/credentials
+**/secrets.*
+firebase/
+
+# --- Neovim (Estado Local) ---
+# Mantemos as configs (lua/), mas ignoramos logs e estados temporarios
+nvim/.netrwhist
+nvim/undo/
+nvim/shada/
+nvim/swap/
+# nvim/lazy-lock.json  # Opcional: Descomente se NAO quiser travar versoes de plugins
+
+# --- Shell e Logs ---
+**/*.log
+.zsh_history
+.bash_history
+.python_history
+.node_repl_history
+
+# --- Ferramentas Específicas ---
+# Ignorar binários instalados localmente, manter apenas scripts de setup
+shell/nvm/
+shell/sdkman/
+flutter/
